@@ -1,13 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+import { News } from '../store';
 
 const API_KEY = "6984d771348a4822a8e8fec8fecdd8a1";
 const BASE_URL = "https://newsapi.org/v2";
 
 export const fetchNews = createAsyncThunk('news/fetch', async(category, thunkAPI) => {
     try {
-        const response = await axios.get(`${BASE_URL}/top-headlines?category=${category}&apiKey=${API_KEY}`);
+        const category = thunkAPI.getState().News.category;
+        const Page = thunkAPI.getState().News.page;
+        const response = await axios.get(`${BASE_URL}/top-trending?category=${category}&apiKey=${API_KEY}&page=${Page}&pagesize=10`);
         return response.data.articles;
     }
     catch(error) {
