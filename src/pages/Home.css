@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 9999;
+    z-index: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -17,8 +17,8 @@
   
   
   .btn:hover {
-    background-color: gray;
-    color: #212529;
+    background-color: rgb(151, 19, 107);
+    color: #eaeef1;
   }
   
   .card:hover {
@@ -34,37 +34,33 @@
     opacity: 0.8;
   }
   
-  .card-title,
-  .card-text {
+  .c-title,
+  .c-text {
     transition: color 0.3s ease;
   }
   
   .card:hover .card-title,
   .card:hover .card-text {
-    color: #6c757d;
+    color: #7f8285;
   }
   
   
-  /* tags h1 */
   .h1 {
     position: relative;
     text-align: center;
-    z-index: 1000;
-  
-  
+    z-index: 1;  
   }
-  
-  
+
   
   .h1::before {
     content: "";
     position: absolute;
+    background-color: rgb(151, 19, 107);
     width: 100px;
     height: 2px;
-    background-color: orange;
     left: 376px;
-    z-index: -2;
     top: 50%;
+    z-index: -2;
   
   }
   
@@ -73,26 +69,26 @@
     position: absolute;
     width: 100px;
     height: 2px;
-    z-index: -2;
-    background-color: orange;
-    right: 376px;
+    background-color:rgb(151, 19, 107);
+    right: 23.4rem;
     top: 50%;
+    z-index: -2;
   
   }
   
   
   .header-lined {
     display: flex;
-    align-items: center;
     justify-content: center;
     text-align: center;
+    align-items: center;
   }
   
   .header-lined::before,
   .header-lined::after {
     content: "";
     flex: 1;
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid rgb(151, 19, 107);
     margin: 0 20px;
   }
   

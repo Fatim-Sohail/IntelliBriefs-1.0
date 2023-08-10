@@ -38,9 +38,9 @@ const Home = ({ category, theme }) => {
                 <div className="col-sm-12 col-md-6 col-lg-4 mb-4 mx-auto" key={index}>
                   <div className="card">
                     <img src={value.urlToImage} className="card-img-top" alt="" />
-                    <div className={`card-body bg-${theme}`}>
-                      <h5 className={`card-title text-${trending}`}>{value.title}</h5>
-                      <p className={`card-text text-${trending}`}>{value.description}</p>
+                    <div className={`card1 bg-${theme}`}>
+                      <h5 className={`c-title text-${trending}`}>{value.title}</h5>
+                      <p className={`c-text text-${trending}`}>{value.description}</p>
                       <a
                         href={value.url}
                         target="_blank"
@@ -61,7 +61,7 @@ const Home = ({ category, theme }) => {
         {!data.error && !data.isLoading && (
           <div className="d-flex justify-content-around align-items-end">
             <button className={`btn btn-${button}`} onClick={() => dispatch(prevPage())}>
-              Previous
+              Prev
             </button>
             <button className={`btn btn-${button}`} onClick={() => dispatch(nextPage())}>
               Next
